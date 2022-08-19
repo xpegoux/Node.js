@@ -17,16 +17,16 @@ do {
     estadoCivil = print.question("Estado Civil: [S = Solteiro(a)] [C = Casado(a)] [V = Viuvo(a)] [D = Divorciado(a)]\n-> ")
 
     if (nome.length < 3) {
-        console.log("Digite nome com mais de três caracteres!");
+        console.error("Digite nome com mais de três caracteres!");
         x = true;
     } else if (sexo != "F" && sexo != "M") {
-        console.log("Digite apenas F para feminino ou M para masculino!!!!");
+        console.error("Digite apenas F para feminino ou M para masculino!!!!");
         x = true;
     } else if (estadoCivil != "S" && estadoCivil != "C" && estadoCivil != "V" && estadoCivil != "D") {
-        console.log("Digite um estado civil correto (S, C, V, D)");
+        console.error("Digite um estado civil correto (S, C, V, D)");
         x = true;
     } else {
-        console.log(`Seu cadastro está completo!\nNome -> ${nome}\nSexo -> ${sexo}\nEstado Civil -> ${estadoCivil}`);
+        console.error(`Seu cadastro está completo!\nNome -> ${nome}\nSexo -> ${sexo}\nEstado Civil -> ${estadoCivil}`);
         x = false;
     }
 

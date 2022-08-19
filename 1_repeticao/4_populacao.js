@@ -10,4 +10,4 @@ while (pais_A < pais_B) {
     pais_B = (pais_B * 0.015) + pais_B;
     ano++;
 }
-console.log(`O país A (${pais_A}) levou ${ano} anos para alcançar o país B ${pais_B}`);
+console.log(`O país A (${pais_A} pessoas) levou ${ano} anos para ultrapassar o país B (${pais_B} pessoas)`);
