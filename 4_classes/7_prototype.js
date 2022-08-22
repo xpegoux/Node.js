@@ -1,3 +1,5 @@
+//O prototype vai representar o protótipo da classe
+Object.prototype //Esse comando representa o protótipo do objeto, que é a forma instanciada da classe, basicamente ele serve para criar ou sobrescrever métodos e atributos da classe.
 //Criando classe PAI.
 class Carro{
     #qtdComb;
@@ -57,7 +59,6 @@ class Carro{
         this.#tpComb = tp;
     }
 }
-//Criando classe filha, através do ->extends<- + nomedaclassePAI.
 class CarroCombate extends Carro {
     constructor(poTiro) { //para acessar o construtor da classe pai, primeiro deve definir o construtor filho e depois o super.
         super(3, 3); //acessando o construtor da classe pai.
@@ -80,19 +81,16 @@ class CarroTransp extends Carro {
     }
     
 }
-//instanciando classe filha com atributos e métodos do pai
-let c1 = new CarroCombate(50);//50 é equivalente a potencia de tiro (parametro da classe filha)
-c1.setLigado = true; //nota-se que não temos este método na classe filha, porém ela está herdando da pai.
+let c1 = new CarroCombate(50);
+c1.setLigado = true;
 c1.info();
 
-//instanciando outro objeto de combate
 let c2 = new CarroCombate(100);
 c2.tpComb = 1;
 c2.setComb = 25;
 c2.municao = 900;
 c2.info();
 
-//instanciando novo objeto com caracteristicas de transporte.
 let c3 = new CarroTransp(90);
 c3.setLigado = true;
 c3.info();
