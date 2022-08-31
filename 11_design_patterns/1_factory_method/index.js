@@ -15,7 +15,22 @@ Considere que:
 import {Computador, Server} from "./creator.js"
 
 var computador = new Computador("12", "250", "2.30");
+var server = new Server("36", "5000", "10");
+
+//getters
+console.log("###Exibindo Getters do tipo Computador!###")
+computador.ram;
+computador.hdd;
+computador.cpu;
+computador.type;
+//imprimindo os atributos com toString 
 computador.toString();
 
-var server = new Server("36", "5000", "10");
+//getters
+console.log("###Exibindo Getters do tipo Server!###")
+server.ram;
+server.hdd;
+server.cpu;
+server.type;
+//imprimindo os atributos com toString 
 server.toString();

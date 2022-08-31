@@ -8,7 +8,7 @@ function createProduto(ram, hdd, cpu, type){
     return new Produto(ram, hdd, cpu, type)
 }
 
-//factory de computador concreto
+//factory de computador concreto herdado do creator abstrato
 export class Computador extends createProduto {
     constructor(ram, hdd, cpu) {
         let type = true;
@@ -16,7 +16,7 @@ export class Computador extends createProduto {
     }
 }
 
-//factory de server concreto
+//factory de server concreto herdado do creator abstrato
 export class Server extends createProduto {
     constructor(ram, hdd, cpu) {
         let type = false;
