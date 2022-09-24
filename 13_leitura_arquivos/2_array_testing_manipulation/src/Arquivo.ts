@@ -1,11 +1,11 @@
 import readline from 'readline-sync';
 
-class Arquivo {
+export class Arquivo {
     private arquivo: string[] = [];
     constructor() {
         this.arquivo;
     }
-
+    //executar o código principal
     main() {
         do {
             this.menu();
@@ -16,7 +16,7 @@ class Arquivo {
             }
         } while (resp == 1);
     }
-
+    //menu interativo
     private menu() {
         console.log("----------------------");
         console.log("[1] - Inserir linha");
@@ -25,7 +25,7 @@ class Arquivo {
         console.log("[0] - Sair");
         console.log("----------------------");
     }
-
+    //opcoes provinientes do menu interativo juntamente dos metodos manipuladores do array
     private option() {
         var option = readline.questionInt("--> ");
         switch (option) {
@@ -59,7 +59,7 @@ class Arquivo {
                 break;
         }
     }
-
+    //metodo complementar de abrir arquivo (array) para ler
     private openFile() {
         console.log("==================");
         console.log("Lendo o arquivo...");
@@ -68,7 +68,7 @@ class Arquivo {
             console.log(`${pos+1} - ${ler}`);
         });
     }
-
+    //inserir novas linhas no arquivo (array)
     private insertLine() {
         console.log("==================");
         console.log("Inserir linhas...");
@@ -82,7 +82,7 @@ class Arquivo {
 
         return this.arquivo;
     }
-
+    //remover linhas especificas
     private removeLine() {
         console.log("==========================================");
         console.log("Deseja remover qual linha do array abaixo?");
@@ -93,10 +93,7 @@ class Arquivo {
         let remover = readline.questionInt("--> ");
         let alterar = this.arquivo
         this.arquivo = alterar.slice(remover);
+        
         return this.arquivo;
     }
 }
-
-let leitor = new Arquivo();
-
-leitor.main();
